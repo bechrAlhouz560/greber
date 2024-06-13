@@ -5,11 +5,17 @@ import { handleURL } from "./upload";
 export const coversPath = path.resolve(getAppData(), "covers");
 
 export function getCoverPath(coverId) {
-  let _path = coverId
-    ? handleURL(path.resolve(coversPath, `${coverId}.jpeg`))
-    : null;
+  try {
+    let _path = coverId
+      ? handleURL(path.resolve(coversPath, `${coverId}.jpeg`))
+      : null;
 
-  return _path;
+    return _path;
+  } catch (error) {
+    console.log(error);
+
+    return "https://placehold.co/600x400";
+  }
 }
 export default function getAppData() {
   let appName = app.getName();
