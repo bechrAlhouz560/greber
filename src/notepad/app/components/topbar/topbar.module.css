@@ -1,0 +1,67 @@
+
+
+
+.top-bar {
+    height: 30px;
+    background: #222222;
+    display: flex;
+    
+    justify-content: flex-end;
+    align-items: center;
+    
+
+}
+.body {
+    color: white;
+    justify-self: flex-start;
+    flex: 1;
+    /* padding: 20px; */
+    padding-left: 15px;
+    font-weight: lighter;
+    -webkit-app-region: drag;
+    z-index: 99999999999;
+    box-sizing: border-box;
+    display: flex;
+}
+.title {
+    flex: 1;
+    opacity: .5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 120px;
+    display: block;
+    overflow: hidden
+}
+
+.window-btns {
+    align-self: flex-end;
+    height: 100%;
+    display: flex;
+}
+
+.win-btn 
+{
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.win-btn:hover {
+    background: rgb(53, 52, 52);
+}
+.danger:hover {
+    background-color: #a31111;
+
+    
+}
+
+.datetime span {
+    color: white;
+    opacity: .5;
+    font: menu;
+}

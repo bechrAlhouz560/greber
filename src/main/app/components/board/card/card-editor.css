@@ -1,0 +1,555 @@
+.card-editor
+{
+    display: flex;
+    flex-direction: column;
+    width: 70% !important;
+    background: #f3f3f3 !important;
+    height: 90%;
+    max-height: 90%;
+}
+
+.card-editor .card-editor-body
+{
+    flex: 1;
+    display: flex;
+    overflow-y: auto;
+
+}
+
+.card-editor-body .card-editor-infos
+{
+    width: 70%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card-editor-body .card-editor-infos .card-activity
+{
+    padding-bottom: 15px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.card-editor-body .card-editor-infos .card-desc textarea
+{
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 0px;
+    padding: 15px;
+    width: -webkit-fill-available;
+    resize: none;
+    color: var(--theme1-blue);
+    height: 50px;
+    line-height: 25px;
+    font-size: 17px;
+    opacity: .7;
+}
+.card-editor-body .card-editor-infos .card-desc textarea:focus
+{
+    background: #f7f7f7;
+    outline: none;
+    box-shadow: var(--g-box-shadow-input);
+}
+.card-editor .card-editor-options
+{
+    width: 200px;
+    padding: 15px;
+    width: 30%;
+}
+.card-editor-title h3
+{
+    line-height: 30px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.card-editor h3
+{
+    color: var(--theme1-blue);
+}
+
+.card-editor .card-cover
+{
+    
+    min-height: 250px;
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    cursor: default;
+    
+}
+.card-editor .card-cover:hover img
+{
+   opacity: .7;
+}
+.card-editor .card-cover img
+{
+    width: 120%;
+    transition: all var(--g-transition) .3s;
+}
+
+.card-activity .activity-list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.activity:first-child
+{
+    margin-top: 10px;
+}
+.activity
+{
+    padding: 10px;
+    font-size: 18px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: var(--g-box-shadow-input);
+}
+
+.activity .activity-name
+{
+    overflow-wrap: break-word;
+}
+.add-activity
+{
+    
+    width: -webkit-fill-available;
+    box-shadow: var(--g-box-shadow-input);
+    margin-top: 10px;
+    background: white;
+
+}
+
+.add-activity input
+{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    width: -webkit-fill-available;
+    cursor: pointer;
+}
+.add-activity input:focus
+{
+    outline: none;
+}
+
+.add-act-btn
+{
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--theme1-blue);
+    color: white;
+    font-size: 17px;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: var(--g-box-shadow);
+    cursor: pointer;
+}
+
+.add-activity .activity-options
+{
+    display: flex;
+    gap: 15px;
+
+}
+
+
+.created_at
+{
+    opacity: .7;
+    font-size: 12px;
+
+}
+.add-activity .addons 
+{
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px;
+}
+.add-activity .addons .addon
+{
+    padding: 5px;
+    border-radius: 5px;
+    color: #0000002f;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+    
+}
+.add-activity .addons .addon:hover
+{
+    background-color: #00000011;
+}
+
+.card-options 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.card-options .card-option,.add-item
+{
+    padding: 10px;
+    background-color: #00000008;
+    color: #000000e1;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+}
+.card-options .card-option:hover, .add-item:hover{
+    background-color: #0000001a;
+    box-shadow: var(--g-box-shadow-input);
+}   
+
+.checklist-items, .checklist,.card-checklists
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.checklist
+{
+    padding: 15px 10px;
+    border: 2pt solid #e9e8e8;
+    border-radius: 5px;
+}
+.checklist-items .checklist-item
+{
+    cursor: pointer;
+    padding: 10px;
+
+
+}
+.checklist-items .checklist-item:hover
+{
+    background-color: #0000001a;
+    box-shadow: var(--g-box-shadow);
+}
+
+.item-input
+{
+    width: -webkit-fill-available;
+    padding: 10px;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+}
+
+.item-infos
+{
+    display: flex;
+    align-items: center;
+    width: -webkit-fill-available;
+    gap: 10px;
+    line-height: 25px;
+    
+   
+
+}
+.item-infos p
+{
+    overflow: hidden;
+    overflow-wrap: break-word;
+    width: -webkit-fill-available;
+}
+.item-infos .del-item
+{
+    display: none;
+    justify-content: flex-end;
+    
+}
+
+.del-item i
+{
+    opacity: .5;
+}
+
+.del-item i:hover
+{
+    opacity: .8;
+}
+
+.checklist-items .checklist-item:hover .del-item
+{
+    display: flex;
+}
+.checklist-header .editing-checklist
+{
+    display: flex;
+    gap: 10px;
+
+}
+.checklist-header .editing-checklist input
+{
+    border: none;
+    background: transparent;
+    flex: 1;
+    font-size: x-large;
+    color: var(--theme1-blue);
+}
+
+.checklist-header .editing-checklist, .checklist-header > span
+{
+    font-size: x-large;
+    color: var(--theme1-blue);
+}
+
+.card .card-cover img
+{
+    width: 100%;
+    
+}
+
+.card
+{
+    padding: 0;
+    overflow: hidden;
+}
+
+.card .card-body
+{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.deadline
+{
+    background-color: #71fb71;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    color: #323232;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.deadline:hover
+{
+    opacity: 1;
+}
+
+.editing-deadline input[type="datetime-local"]
+{
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #00000008;
+    cursor: pointer;
+    text-align: center;
+    color: var(--theme1-blue);
+}
+.editing-deadline input[type="datetime-local"]:focus
+{
+    background-color: #0000001a;
+    box-shadow: var(--g-box-shadow-input);
+}
+
+.editing-deadline button
+{
+    border: none;
+}
+
+.editing-deadline span
+{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card-editor-options .board-bg
+{
+    width: -webkit-fill-available;
+}
+
+.labels
+{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+
+}
+.labels .label
+{
+    width: fit-content;
+    min-width: 35px;
+    border-radius: 5px;
+    min-height: 10px;
+    height: 25px;
+    cursor: pointer;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    color: white;
+    box-shadow: var(--g-box-shadow);
+    
+}
+.labels .label .label-name
+{
+    font-size: 13px;
+    padding-right: 5px;
+}
+.labels .label:hover
+{
+    opacity: .7;
+}
+.labels .label input
+{
+    width: 50px;
+    height: 10px;
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.labels-dropdown
+{
+    position: absolute;
+    top: 0;
+    right: 100%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: var(--g-box-shadow);
+    z-index: 9999;
+    width: 250px;
+    cursor: default;
+}
+
+.labels-dropdown .dropdown-header
+{
+    padding: 10px;
+    border-bottom: 1pt solid #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--theme1-blue);
+}
+
+
+.labels-dropdown .dropdown-body
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.d-labels
+{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1pt solid #eeeeee;
+}
+.d-labels .d-label
+{
+    background: rgb(210, 144, 52);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    box-shadow: var(--g-box-shadow);
+}
+.d-labels .d-label:hover
+{
+    opacity: .7;
+}
+
+.activity 
+{
+    display: flex;
+    align-items: center;
+}
+
+.activity .act-body
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.activity .act-options
+{
+    display: none;
+    gap: 10px;
+    transition: all var(--g-transition) .3s;
+    flex: 1;
+    justify-content: flex-end;
+}
+.activity:hover .act-options
+{
+    display: flex;
+}
+.activity .act-option
+{
+    opacity: .5;
+    cursor: pointer;
+}
+.activity .act-option:hover
+{
+    opacity: 1;
+}
+
+.label .del-lab
+{
+    display: none;
+}
+
+.label:hover .del-lab
+{
+    display: block;
+}
+
+
+.card .label:hover .del-lab
+{
+    display: none;
+}
+.card .labels .label
+{
+    height: unset;
+    transition: all var(--g-transition) .3s;
+}
+.card .labels .label .label-name
+{
+    display: none;
+}
+.card .labels:hover .label
+{
+    min-width: fit-content;
+    width: fit-content;
+}
+.card .labels:hover .label-name
+{
+    display: block;
+    padding: 5px;
+}
+
+.card-body .card-desc {
+    font-size: 15px;
+    opacity: .7;
+    line-height: 17px;
+}

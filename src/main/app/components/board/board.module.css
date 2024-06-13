@@ -1,0 +1,117 @@
+.board-container
+{
+    /* backgrounf color by default */
+    background: #0079BF;
+    height: 100%;
+    color: white;
+    overflow-y: auto;
+    position: relative;
+    
+}
+
+.board-container .board-header
+{
+    width: -webkit-fill-available;
+    padding: 15px;
+    text-align: center;
+
+    position: sticky;
+     background: #ffffff90;
+    /* color: var(--theme1-blue); */
+    z-index: 99;
+    top: 0;
+
+    
+}
+.board-container .board-header h1
+{
+    cursor: pointer;
+}
+
+.add-list , .list
+{
+    background-color: white;
+    color: var(--theme1-blue);
+    /* width: 250px; */
+    padding: 15px;
+    box-shadow: 0 0 7px #767676;
+    height: fit-content;
+    border-radius: 5px;
+    transition: all var(--g-transition) .3s;
+    opacity: .7;
+}
+.add-list
+{
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    
+}
+.add-list:hover,.list:hover
+{
+    opacity: 1;
+}
+.list-container
+{
+    display: flex;
+    gap: 15px !important;
+    padding: 15px;
+    flex-wrap: wrap;
+   /* padding-top: 70px;
+   padding-bottom: 70px; */
+
+   
+}
+.list-container > div {
+    gap: 10px !important;
+    height: fit-content !important;
+}
+.board-btn span
+{
+    overflow: hidden;
+    position: relative;
+    font-weight: 600;
+    font-size: 17px;
+    width: calc(100%);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 15px;
+    display: inline-block;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.del-board
+{
+    display: none;
+    opacity: .5;
+}
+.del-board:hover
+{
+    opacity: 1;
+}
+.board-btn:hover .del-board
+{
+    display: block;
+}
+
+.board-name-edit
+{
+    
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.board-header .cancel-edit
+{
+    font-size: 25px;
+    opacity: .7;
+    margin-left: 10px;
+    cursor: pointer;
+}
+

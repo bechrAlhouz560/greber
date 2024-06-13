@@ -1,0 +1,16 @@
+:root {
+    --g-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    --g-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    --g-box-shadow-input: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* Theme 1 */
+    --theme1-white: #FAFAFA;
+    --theme1-lighter-blue: #E8F1F5;
+    --theme1-blue: #005691;
+    --theme1-dark-blue: #004A7C;
+    /* Theme 2 */
+    --theme2-light-blue: #08D9D6;
+    --theme2-black: #252A34;
+    --theme2-red: #FF2E63;
+    --theme2-dark-red: #df1c4d;
+    --theme2-grey: #EAEAEA;
+}

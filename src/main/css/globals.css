@@ -1,0 +1,283 @@
+/* global css code  :) */
+
+:root {
+   --dw-transition: 20px;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+}
+
+* {
+   user-select: none;
+   user-zoom: none;
+   outline: none;
+   box-sizing: border-box;
+}
+
+hr
+{
+   opacity: 0.2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p , span {
+   margin: 0;
+   vertical-align: middle !important;
+}
+
+#app {
+   width: 100vw;
+   height: 100vh;
+}
+
+.body {
+   height: calc(100vh - 80px);
+   display: flex;
+   flex-direction: column;
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+
+.dropdown .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 300px;
+   box-shadow: 0px 0 7px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+   border-radius: 5px;
+   overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+   display: flex;
+   flex-direction: column;
+   row-gap: 5px;
+}
+
+
+.dropdown .dropdown-item {
+   height: 40px;
+   padding: 0 16px;
+   display: flex;
+   align-items: center;
+   color: var(--theme1-blue);
+   cursor: pointer;
+}
+
+.dropdown .dropdown-item:hover {
+   background-color: #eeeeee;
+}
+
+.modal-container {
+   z-index: 999;
+   height: 100vh;
+   width: 100vw;
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.5);
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow-y: auto;
+}
+
+.modal-container .modal {
+   z-index: 9999;
+
+   width: 50%;
+   background-color: white;
+   border-radius: 10px;
+   overflow: hidden;
+   overflow-y: auto;
+
+
+}
+
+
+.g-input {
+   border: none;
+   font-size: 18px;
+   padding: 0 10px;
+   height: 40px;
+   border-bottom: 2pt solid var(--theme1-blue);
+   color: var(--theme1-blue);
+   transition: all var(--g-transition) .3s;
+
+}
+
+.g-input:not(input):not(input[type="button"]):not(button) {
+   resize: none;
+   height: 150px;
+   padding: 15px;
+
+}
+
+.g-input:focus {
+   outline: none;
+   background-color: var(--theme1-blue);
+   color: white;
+
+
+}
+
+.g-btn {
+   font-size: 18px;
+   padding: 0 10px;
+   height: 40px;
+   border: 2pt solid var(--theme1-blue);
+   color: var(--theme1-blue);
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all var(--g-transition) .3s;
+}
+
+.g-btn:hover {
+   background-color: var(--theme1-blue);
+   color: white;
+}
+
+.g-btn-danger {
+   color: var(--theme2-dark-red);
+   border-color: var(--theme2-dark-red);
+}
+
+.g-btn-danger:hover {
+   background-color: var(--theme2-dark-red);
+   color: white;
+}
+
+.g-btn:disabled {
+   opacity: .5;
+}
+
+
+.g-btn-rounded {
+   padding-left: 15px;
+   padding-right: 15px;
+   border-radius: 50px;
+   font-size: medium;
+}
+.empty {
+   height: 200px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   font-size: 30px;
+   justify-content: center;
+   background-color: var(--theme1-lighter-blue);
+   color: var(--theme1-dark-blue);
+}
+
+*::-webkit-scrollbar
+{
+   -webkit-appearance: none;
+   appearance: none;
+   
+   width: 5px;
+   height: 5px;
+}
+*::-webkit-scrollbar-thumb
+{
+   
+   -webkit-appearance: none;
+   appearance: none;
+   background: #b9b9b9;
+   border-radius: 10px;
+}
+
+.progress-bar
+{
+   width: -webkit-fill-available;
+   height: 10px;
+   border-radius: 10px;
+   background-color: #eeeeee;
+   display: flex;
+   gap: 5px;
+   align-items: center;
+}
+.progress-bar .bar
+{
+   background-color: var(--theme1-blue);
+   height: 100%;
+   border-radius: 10px;
+   transition: all var(--g-transition) .3s;
+   
+   
+}
+.progress-bar .percent
+{
+   font-size: 13px;
+}
+.danger
+
+{
+   background-color: #f54b4b !important;
+   color: white !important;
+}
+
+.danger:hover
+{
+   background-color: #db3333 !important;
+}
+
+.default-input
+{
+   
+   padding: 10px;
+   border: none;
+   box-shadow: var(--g-box-shadow-input);
+   border-radius: 5px;
+   font-size: 15px;
+}
+.default-input:focus
+{
+   background-color: #f7f7f7;
+}
+
+.default-btn
+{
+   padding: 10px;
+   background-color: var(--theme1-blue);
+   color: white;
+   cursor: pointer;
+   position: relative;
+   border-radius: 5px;
+   width: -webkit-fill-available;
+   opacity: .7;
+}
+
+.default-btn:hover
+{
+   opacity: 1;
+}
+
+
+.btn-small
+{
+   height: 30px;
+}
+
+button {
+   appearance: none !important;
+   -webkit-appearance: none !important;
+}
+
+
+svg {
+   vertical-align: middle;
+   font-size:  115%;
+ }

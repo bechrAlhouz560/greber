@@ -1,0 +1,110 @@
+@import url(../main/css/variables.css);
+@import url(../main/css/globals.css);
+#app {
+    position: relative;
+    height: 600px;
+    width: 350px;
+    background-color: var(--theme1-blue);
+}
+
+.add-note
+{
+
+    background-color: #e7e7e7;
+    color: var(--theme1-blue);
+    min-width: 150px;
+    /* max-width: 250px;
+    width: 200px; */
+    padding: 10px;
+    box-shadow: var(--g-box-shadow);
+    height: fit-content;
+    border-radius: 5px;
+    transition: all var(--g-transition) .3s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: .6;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.add-note:hover {
+    opacity: 1;
+}
+
+.body {
+    height: calc(100vh - 30px);
+    box-sizing: border-box;
+    /* padding: 10px; */
+}
+
+.note {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.back-btn {
+    height: 40px;
+    width: 40px;
+    background: #eeeeee;
+
+    opacity: .6;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* position: absolute; */
+    bottom: 10px;
+    left: 10px;
+    transition: all var(--g-transition) .3s;
+
+}
+
+.back-btn:hover {
+    opacity: 1;
+}
+
+
+.bg-list
+{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.bg-list .bg
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background-color: var(--theme2-dark-red);
+    cursor: pointer;
+    opacity: .7;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: var(--g-box-shadow);
+}
+.bg-list .bg div
+{
+    
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+
+}
+.bg-list .bg:hover
+{
+    opacity: 1;
+}
+.bg-list-abs {
+    flex: 1;
+}

@@ -1,0 +1,61 @@
+.file-selector
+{
+    display: flex;
+    padding: 10px;
+
+}
+
+.file-selector .files-list
+{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.files-list .file, .add-file
+{
+    width: 100px;
+    height: 100px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all var(--g-transition) .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.add-file span , .file span
+{
+
+    font-size: 35px;
+    opacity: .2;
+}
+.file:hover,.add-file:hover
+{
+    background-color: #eeeeee;
+    box-shadow: var(--g-shadow);
+}
+
+.img-file
+{
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-file img
+{
+    width: 120%;
+    transition: all var(--g-transition) .3s;
+}
+
+.file:hover .img-file img
+{
+    opacity: .3;
+
+}

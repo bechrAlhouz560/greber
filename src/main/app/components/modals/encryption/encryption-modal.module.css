@@ -1,0 +1,32 @@
+.encryption-modal {
+    background-color: white;
+    width: 550px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.header {
+    padding: 20px;
+    color: var(--theme1-white);
+    background-color: var(--theme1-blue);
+    border-bottom: 1pt solid #eeeeee;
+}
+
+.body {
+    padding: 15px;
+    display: flex;
+}
+
+.half {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.half:first-child {
+    border-right: 1pt solid #eeeeee;
+}
+
+.half > input {
+    width: 100%;
+    box-sizing: border-box;
+}

@@ -1,0 +1,185 @@
+.project-modal 
+{
+    display: flex;
+    width: 70% !important;
+    height: auto !important;
+    
+    
+}
+.project-modal .project-infos
+{
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.project-modal .project-infos .title
+{
+    color: var(--theme1-blue);
+}
+.project-modal .project-infos .desc
+{
+    color: var(--theme1-blue);
+    opacity: .5;
+}
+.project-modal .project-img
+{
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.781);
+
+}
+.project-modal .project-img img
+{
+    position: absolute;
+    height: 100%;
+    transition: all var(--g-transition) .3s;
+    width: 100%;
+    object-fit: cover;
+    
+}
+.project-modal .project-img:hover img
+{
+    opacity: .5;
+}
+.project-modal .project-infos .project-inputs
+{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.project-modal .project-infos .project-inputs .project-input
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.project-modal .project-infos .project-inputs .project-input .project-label
+{
+    color: var(--theme1-blue);
+}
+
+.board-modal 
+{
+    width: 500px !important;
+    height: 300px !important;
+    top: 100px;
+    position: absolute;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    
+}
+.board-input::placeholder
+{
+    color: white;
+}
+/* .board-modal-content
+{
+    height: calc(100% - 66px);
+} */
+.board-modal .g-btn
+{
+    color: white;
+}
+.board-input 
+{
+    
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 18px;
+    width: -webkit-fill-available;
+    color: white;
+
+}
+.board-input:focus
+{
+    outline: none;
+}
+.board-modal-content textarea {
+    
+    height: 100px;
+    resize: none;
+    flex: 1;
+    padding: 15px;
+    opacity: .8;
+    font-size: 16px;
+}
+.board-modal .title
+{
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+   
+}
+
+.board-modal .board-body
+{
+    height: 100%;
+    display: flex;
+    color: white;
+    
+    
+}
+.board-modal .board-body .board-infos
+{
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #0079BF;
+}
+
+.board-bg
+{
+    width: 30%;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: transparent;
+}
+.bg-list
+{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.bg-list .bg
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--theme2-dark-red);
+    cursor: pointer;
+    opacity: .7;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: var(--g-box-shadow);
+}
+.bg-list .bg div
+{
+    
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+
+}
+.bg-list .bg:hover
+{
+    opacity: 1;
+}
+

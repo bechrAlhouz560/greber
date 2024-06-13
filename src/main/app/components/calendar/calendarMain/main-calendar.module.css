@@ -1,0 +1,104 @@
+.calendar-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.calendar-head {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.options {
+    flex: 1 1 0%;
+    justify-content: end;
+    display: flex;
+}
+
+
+.calendar-switches , .main-calendar-head {
+    display: flex;
+    padding: 3px;
+    border-radius: 5px;
+    background: #e2f4ff;
+    width: fit-content;
+    gap: 5px;
+}
+
+.switch , .main-calendar-item {
+    padding: 5px 15px;
+    border-radius: 5px;
+    color:#228ed9;
+    cursor: pointer;
+}
+.switch:not(.switch-active):hover {
+    background: #c4e2f7;
+}
+.switch-active {
+    background-color: #228ed9;
+    color: white;
+
+}
+.main-calendar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    border-radius: 10px;
+    overflow-y: hidden;
+    border: 1pt solid #eeeeee;
+}
+.main-calendar-head {
+    border-radius: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.main-calendar-item {
+    flex: 1;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main-calendar-grid {
+    display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  flex: 1;
+}
+
+.main-calendar-item {
+    height: -webkit-fill-available;
+}
+
+.main-calendar-day {
+    padding: 10px;
+    border: 1pt solid #f0f0f0;
+    cursor: pointer;
+    transition: all ease .2s;
+
+}
+
+
+.main-calendar-day:hover {
+    background-color: #f0f0f0;
+}
+
+.cal-day-body {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-day {
+    height: 5px;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.cal-day-head {
+    padding-bottom: 5px;
+}

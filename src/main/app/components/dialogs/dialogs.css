@@ -1,0 +1,71 @@
+.error-dialog-container
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+    display: flex;
+    justify-content: center;
+    z-index: 99999999999;
+    
+}
+
+
+.error-dialog-container .error-dialog
+{
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--g-box-shadow);
+    top: 20%;
+    position: absolute;
+    height: fit-content;
+
+}
+
+.error-dialog-container .error-dialog .error-title
+{
+    
+    background: #f54b4b;
+    padding: 15px;
+    color: white;
+
+
+}
+.error-dialog-container .error-dialog .error-msg
+{
+    padding: 15px;
+    font-size: 17px;
+    color: #00000098;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.error-btns
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    background-color: #eeeeee;
+}
+
+.error-btns .error-btn
+{
+    padding: 10px;
+    background-color: #f54b4b;
+    color: white;
+    font-size: 17px;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: var(--g-box-shadow);
+    cursor: pointer;
+    transition: var(--g-transition);
+}
+.error-btns .error-btn:hover
+{
+    background-color: #d83a3a;
+}

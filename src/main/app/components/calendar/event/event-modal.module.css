@@ -1,0 +1,35 @@
+
+
+.event-modal {
+    padding: 10px;
+    border: 1pt solid #eeeeee;
+    box-shadow: 0 0 7px #eeeeee;
+    position: absolute;
+
+    width: 300px;
+    z-index: 11;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: default;
+}
+
+.event-modal > input {
+    width: 100%;
+}
+
+.event-head {
+    display: flex;
+    align-items: center;
+}
+
+.event-head h2 {
+    flex: 1;
+    color: #228ed9;
+}
+
+.event-head span {
+    cursor: pointer;
+}
