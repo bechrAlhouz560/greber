@@ -1,7 +1,7 @@
 import { ipcRenderer } from "electron";
 import * as React from "react";
 import { useEffect } from "react";
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from "react-dom/client";
 import App from "./app/App.jsx";
 import greberDB from "./app/db/main.js";
 import fs from "fs";
@@ -26,5 +26,7 @@ function Main() {
 }
 
 export default function render() {
-  ReactDOM.render(<Main />, document.getElementById("app"));
+  const root = ReactDOM.createRoot(document.getElementById("app"));
+
+  root.render(<Main />);
 }

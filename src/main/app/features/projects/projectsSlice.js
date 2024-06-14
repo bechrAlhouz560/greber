@@ -86,7 +86,6 @@ const projectsSlice = createSlice({
       };
     },
     init: function (state, action) {
-      console.log("life acttion ", action);
       return action.payload.projects
         ? action.payload
         : {

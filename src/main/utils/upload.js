@@ -5,10 +5,8 @@ import { coversPath, getCoverPath } from "./getAppData";
 import { promisify } from "util";
 
 import path from "path";
+import { isDev } from "./globals";
 
-function isDev() {
-  return process.env.ELECTRON_ENV === "dev";
-}
 export default async function uploadFile(message, mime, isBase64, types) {
   try {
     let file = await dialog.showOpenDialog({
@@ -35,7 +33,7 @@ export async function removeCover(coverId) {
     await promisify(unlink)(getCoverPath(coverId));
     return coverId;
   } catch (error) {
-    console.log(error);
+    console.log("remove cover error");
   }
 }
 export function uploadCover(coverId, _path) {
@@ -69,6 +67,5 @@ export function uploadCover(coverId, _path) {
 
 export function handleURL(url) {
   let dev = isDev();
-  console.log("is Dev", dev);
   return url ? (dev ? toBase64Sync(url, "image") : url) : null;
 }
