@@ -2,11 +2,11 @@
   "name": "greber",
   "productName": "Greber - Project Management Software",
   "version": "1.0.0",
-  "description": "Greber - Project Management Software",
+  "description": "Local Project Management Software using Electron.js, React and Redux",
   "main": ".webpack/main",
   "private": true,
   "scripts": {
-    "start": "electron-forge start",
+    "start": "cross-env ELECTRON_ENV=dev electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make --arch=ia32",
     "publish": "electron-forge publish"
@@ -21,7 +21,7 @@
     "forge": {
       "packagerConfig": {
         "asar": true,
-        "icon": "D:/Projects/upwork/greber/src/assets/1x/logo_min.ico"
+        "icon": "./src/assets/1x/logo_min.ico"
       },
       "makers": [
         {
@@ -92,6 +92,7 @@
     "@electron-forge/plugin-webpack": "6.0.0-beta.61",
     "@vercel/webpack-asset-relocator-loader": "1.7.0",
     "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.0.0",
     "electron": "15.3.0",
     "electron-winstaller": "^5.1.0",
@@ -103,6 +104,7 @@
     "@electron/remote": "^2.0.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@reduxjs/toolkit": "^1.6.2",
+    "electron-is-dev": "^3.0.1",
     "electron-squirrel-startup": "^1.0.0",
     "fs": "^0.0.1-security",
     "moment": "^2.29.1",

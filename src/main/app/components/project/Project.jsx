@@ -199,6 +199,7 @@ export default function Project(props) {
 
             await removeCover(project.img);
             let _img = await uploadCover(coverId);
+
             if (!_img.canceled) {
               editProject(
                 {

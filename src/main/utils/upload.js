@@ -1,8 +1,14 @@
 import { app, dialog } from "@electron/remote";
-import { copyFile, unlink } from "fs";
+import { copyFile, copyFileSync, unlink } from "fs";
 import { toBase64, toBase64Sync } from "./copy";
-import { getCoverPath } from "./getAppData";
+import { coversPath, getCoverPath } from "./getAppData";
 import { promisify } from "util";
+
+import path from "path";
+
+function isDev() {
+  return process.env.ELECTRON_ENV === "dev";
+}
 export default async function uploadFile(message, mime, isBase64, types) {
   try {
     let file = await dialog.showOpenDialog({
@@ -37,10 +43,12 @@ export function uploadCover(coverId, _path) {
     function copy(file) {
       if (!file.canceled) {
         const filePath = file?.filePaths ? file?.filePaths[0] : file;
-        const coverPath = getCoverPath(coverId);
-        copyFile(filePath, coverPath, function () {
-          resolve(coverPath);
-        });
+        let coverPath = path.resolve(coversPath, `${coverId}.jpeg`);
+
+        copyFileSync(filePath, coverPath);
+        coverPath = getCoverPath(coverId);
+
+        resolve(coverPath);
       } else {
         resolve(file);
       }
@@ -60,6 +68,7 @@ export function uploadCover(coverId, _path) {
 }
 
 export function handleURL(url) {
-  let dev = 1;
-  url ? (dev ? toBase64Sync(url, "image") : url) : null;
+  let dev = isDev();
+  console.log("is Dev", dev);
+  return url ? (dev ? toBase64Sync(url, "image") : url) : null;
 }

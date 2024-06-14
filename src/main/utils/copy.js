@@ -22,6 +22,7 @@ export function toBase64Sync(filePath, mime) {
   const data = fs.readFileSync(filePath);
   let base64 = data.toString("base64");
   let dataUrl = `data:${mime}/${ext};base64,${base64}`;
+
   return dataUrl;
 }
 
