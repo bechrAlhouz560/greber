@@ -179,7 +179,9 @@ export default function CreateProjectModal(props) {
               "image",
               false
             );
-            setProjectImg(project_img);
+            if (project_img) {
+              setProjectImg(project_img);
+            }
           }}
         >
           <img src={projectImg} alt="" />

@@ -85,6 +85,7 @@
     justify-content: center;
     background-color: black;
     cursor: default;
+    position: relative;
     
 }
 .card-editor .card-cover:hover img
@@ -553,3 +554,4 @@
     opacity: .7;
     line-height: 17px;
 }
+

@@ -17,6 +17,7 @@ import { ipcRenderer } from "electron";
 import { CiStickyNote } from "react-icons/ci";
 import { AiFillProject, AiOutlineHeart } from "react-icons/ai";
 import { RiCalendarTodoFill } from "react-icons/ri";
+import { MdBackup } from "react-icons/md";
 
 export function DropdownItem(props) {
   const { item } = props;
@@ -178,6 +179,12 @@ export default function NavBar(props) {
         dispatch(routerSlice.actions.setActiveRouter("garbage"));
       },
     },
+    // {
+    //   icon: <MdBackup />,
+    //   onClick: function () {
+    //     dispatch(routerSlice.actions.setActiveRouter("garbage"));
+    //   },
+    // },
   ]);
 
   return (

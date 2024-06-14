@@ -338,3 +338,25 @@ svg {
       margin-top: 30px ;
 
     }
+
+    .bg-edit-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 7px;
+    border-radius: 150px;
+    border: 1pt solid var(--theme1-blue);
+
+    color: var(--theme1-blue);
+    cursor: pointer;
+
+    opacity: .8;
+
+    transition: all;
+}
+
+.bg-edit-btn:hover {
+    opacity: .3;
+
+    background-color: white;
+}

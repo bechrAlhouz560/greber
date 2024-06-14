@@ -23,6 +23,7 @@ import {
   FiPlusSquare,
   FiTrash,
 } from "react-icons/fi";
+import { MdEdit } from "react-icons/md";
 
 // Secondary Components
 export function BoardButton(props) {
@@ -191,27 +192,31 @@ export default function Project(props) {
           display: sideBarHidden ? "none" : "flex",
         }}
       >
-        <div
-          className={styles["project-img"]}
-          onClick={async function () {
-            // generate a cover id
-            const coverId = genID(10);
-
-            await removeCover(project.img);
-            let _img = await uploadCover(coverId);
-
-            if (!_img.canceled) {
-              editProject(
-                {
-                  ...project,
-                  img: coverId,
-                },
-                dispatch
-              );
-            }
-          }}
-        >
+        <div className={styles["project-img"]}>
           <img src={getCoverPath(project.img)} alt="" />
+
+          <div
+            className="bg-edit-btn"
+            onClick={async function () {
+              // generate a cover id
+              const coverId = genID(10);
+
+              await removeCover(project.img);
+              let _img = await uploadCover(coverId);
+
+              if (!_img.canceled) {
+                editProject(
+                  {
+                    ...project,
+                    img: coverId,
+                  },
+                  dispatch
+                );
+              }
+            }}
+          >
+            <MdEdit />
+          </div>
         </div>
         <div className={styles["project-title"]}>
           <span>{project.name}</span>

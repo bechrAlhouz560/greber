@@ -2,6 +2,7 @@ import { app } from "@electron/remote";
 import path from "path";
 import { handleURL } from "./upload";
 
+import cardBg from "../../assets/bg.png";
 export const coversPath = path.resolve(getAppData(), "covers");
 
 export function getCoverPath(coverId) {
@@ -14,7 +15,7 @@ export function getCoverPath(coverId) {
   } catch (error) {
     console.log(error);
 
-    return "https://placehold.co/600x400";
+    return cardBg;
   }
 }
 export default function getAppData() {

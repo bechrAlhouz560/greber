@@ -13,6 +13,7 @@ import "./card-editor.css";
 import cardLabels from "../../../features/cards/cardLabels.js";
 
 import cardBg from "../../../../../assets/bg.png";
+import UploadImg from "../../../../../assets/SVG/up_img_1.svg";
 import { ErrorContext } from "../../../App.jsx";
 import { globalColors } from "../../../../utils/globals.js";
 import { getCoverPath } from "../../../../utils/getAppData.js";
@@ -33,6 +34,7 @@ import {
   FiXCircle,
 } from "react-icons/fi";
 import { toBase64Sync } from "../../../../utils/copy.js";
+import { MdEdit } from "react-icons/md";
 // editor functions and tools
 export function editCard(newCard, dispatch) {
   let _newCard = {};
@@ -1170,30 +1172,31 @@ function CardEditor(props) {
       }}
     >
       <div className="modal card-editor">
-        <div
-          className="card-cover"
-          onClick={async function () {
-            await removeCover(_card.img);
+        <div className="card-cover">
+          <img src={_card.img ? getCoverPath(_card.img) : cardBg} alt="" />
 
-            let img = await uploadCover(_card.id);
+          <span
+            className={"bg-edit-btn"}
+            onClick={async function () {
+              await removeCover(_card.img);
 
-            console.log(img);
-            if (!img.canceled) {
-              console.log("not canceled");
-              editCard(
-                {
-                  ..._card,
-                  img: _card.id,
-                },
-                dispatch
-              );
-            }
-          }}
-        >
-          <img
-            src={_card.img ? getCoverPath(_card.img) || cardBg : ""}
-            alt=""
-          />
+              let img = await uploadCover(_card.id);
+
+              console.log(img);
+              if (!img.canceled) {
+                console.log("not canceled");
+                editCard(
+                  {
+                    ..._card,
+                    img: _card.id,
+                  },
+                  dispatch
+                );
+              }
+            }}
+          >
+            <MdEdit />
+          </span>
         </div>
         <div className="card-editor-body">
           <div className="card-editor-infos">

@@ -4,6 +4,8 @@
     flex-direction: column;
     border: 1pt solid #eeeeee;
     min-width: 250px;
+
+    transition: all;
 }
 
 .project-card-content
@@ -28,10 +30,10 @@
     position: relative;
 }
 
-.project-card .project-img:hover img
+/* .project-card .project-img:hover img
 {
     opacity: .5;
-}
+} */
 .project-card .project-img img
 {
     width: 120%;
@@ -92,6 +94,7 @@
     flex: 1;
     cursor: pointer;
     width: 18px;
+    transition: all;
 }
 
 .project-card-options .project-card-option

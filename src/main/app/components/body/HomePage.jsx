@@ -64,7 +64,6 @@ export default function HomePage() {
             <h1 className={styles["header"]}>
               <FiClock /> Recently Opened
             </h1>
-            <br />
             {renderProjects(recentProjects)}
           </div>
           <div className={styles["home-page-section"]}>
@@ -72,7 +71,6 @@ export default function HomePage() {
             <h1 className={styles["header"]}>
               <FiHeart /> Saved
             </h1>
-            <br />
             {renderProjects(savedProjects)}
           </div>
         </div>
